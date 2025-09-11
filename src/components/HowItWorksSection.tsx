@@ -10,7 +10,7 @@ export const HowItWorksSection = () => {
     },
     {
       icon: FileText,
-      title: "(5% payment*) Book Livspace",
+      title: "(5% payment*) Book ",
       description: "",
     },
     {

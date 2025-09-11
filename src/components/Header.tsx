@@ -76,6 +76,13 @@ export const Header = () => {
                   Services
                 </a>
                 <a 
+                  href="/blog" 
+                  className="text-white hover:text-brand-gold transition-colors duration-300 font-medium py-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Blog
+                </a>
+                <a 
                   href="#about" 
                   className="text-white hover:text-brand-gold transition-colors duration-300 font-medium py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
