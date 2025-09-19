@@ -5,10 +5,10 @@ export const BrandsSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-""-gray">
+    <section className="py-16 bg- -gray">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-2xl font-bold text-""-dark mb-2">
+          <h2 className="text-2xl font-bold text- -dark mb-2">
             Winning collaborations that produce winning designs.
           </h2>
         </div>
@@ -17,7 +17,7 @@ export const BrandsSection = () => {
           {brands.map((brand, index) => (
             <div key={index} className="text-center">
               <div className="h-16 flex items-center justify-center">
-                <span className="text-lg font-semibold text-""-text-muted">
+                <span className="text-lg font-semibold text- -text-muted">
                   {brand}
                 </span>
               </div>

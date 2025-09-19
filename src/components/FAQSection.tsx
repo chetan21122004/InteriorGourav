@@ -34,15 +34,15 @@ export const FAQSection = () => {
   return (
     <section className="py-6 bg-white">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="text-4xl font-bold text-""-dark mb-12">FAQs</h2>
+        <h2 className="text-4xl font-bold text- -dark mb-12">FAQs</h2>
         
         <Accordion type="single" collapsible className="space-y-4">
           {faqs.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`} className="border border-gray-200 rounded-lg px-6">
-              <AccordionTrigger className="text-left font-semibold text-""-dark hover:no-underline">
+              <AccordionTrigger className="text-left font-semibold text- -dark hover:no-underline">
                 {index + 1}. {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-""-text-muted leading-relaxed">
+              <AccordionContent className="text- -text-muted leading-relaxed">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

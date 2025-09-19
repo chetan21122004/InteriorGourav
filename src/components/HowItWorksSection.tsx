@@ -34,7 +34,7 @@ export const HowItWorksSection = () => {
     <section className="py-6 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-""-dark mb-8">
+          <h2 className="text-4xl font-bold text- -dark mb-8">
             How it works
           </h2>
           
@@ -42,9 +42,9 @@ export const HowItWorksSection = () => {
             {steps.map((step, index) => (
               <div key={index} className="flex flex-col items-center relative">
                 <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-                  <step.icon className="w-8 h-8 text-""-coral" />
+                  <step.icon className="w-8 h-8 text- -coral" />
                 </div>
-                <h3 className="font-semibold text-""-dark text-center max-w-32">
+                <h3 className="font-semibold text- -dark text-center max-w-32">
                   {step.title}
                 </h3>
                 

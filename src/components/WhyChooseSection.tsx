@@ -19,7 +19,7 @@ export const WhyChooseSection = () => {
   ];
 
   return (
-    <section className="py-10  bg-""-green">
+    <section className="py-10  bg- -green">
  
     </section>
   );
