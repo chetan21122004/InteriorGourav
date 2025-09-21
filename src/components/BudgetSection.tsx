@@ -3,19 +3,19 @@ import { Button } from "@/components/ui/button";
 export const BudgetSection = () => {
   const budgetOptions = [
     {
-      price: "Starting at 3.57L*",
+      price: "Modular Kitchen Starting at 1.75L*",
       image: "/work/2.jpg",
-      alt: "Budget Home Interior",
+      alt: " Modular Kitchen",
     },
     {
-      price: "Starting at 4.23L*",
+      price: " 2bhk Starting at 6.75L*",
       image: "/work/1.jpg",
-      alt: "Premium Home Interior",
+      alt: "2bhk",
     },
     {
-      price: "Starting at 4.81L*",
+      price: "3bhk Starting at 8.75L*",
       image: "/work/11.jpg",
-      alt: "Luxury Home Interior",
+      alt: "3bhk  8.75L",
     },
   ];
 

@@ -15,12 +15,12 @@ export const HowItWorksSection = () => {
     },
     {
       icon: Zap,
-      title: "(60% payment) Execution begins",
+      title: "(80% payment) Execution begins",
       description: "",
     },
     {
       icon: Settings,
-      title: "(100% payment) Final installations",
+      title: "Multiple installations",
       description: "",
     },
     {

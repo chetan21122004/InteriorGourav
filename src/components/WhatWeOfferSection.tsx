@@ -6,19 +6,12 @@ export const WhatWeOfferSection = () => {
     { name: "Modular kitchens", icon: "🏠" },
     { name: "Modular wardrobes", icon: "👔" }, 
     { name: "Lighting design", icon: "💡" },
-    { name: "Premium flooring", icon: "🏗️" },
-    { name: "Electrical work", icon: "⚡" },
-    { name: "Civil construction", icon: "🔨" },
     { name: "False ceiling", icon: "🏢" },
     { name: "Wall design & painting", icon: "🎨" },
   ];
 
   const priceBenefits = [
-    {
-      title: "Flexible Payment Plans",
-      description: "EMI solutions and payment schemes from leading financial partners",
-      highlight: "0% Interest Available"
-    },
+    
     {
       title: "Transparent Pricing",
       description: "No hidden costs or last-minute additions to your project budget",
@@ -171,7 +164,7 @@ export const WhatWeOfferSection = () => {
               <div className="space-y-3 md:space-y-4">
                 <div className="flex items-start md:items-center">
                   <Star className="w-5 h-5 md:w-6 md:h-6 text-brand-gold mr-3 fill-current flex-shrink-0 mt-0.5 md:mt-0" />
-                  <span className="text-sm md:text-lg leading-relaxed">15+ Years of Excellence in Interior Design</span>
+                  <span className="text-sm md:text-lg leading-relaxed">7+ Years of Excellence in Interior Design</span>
                 </div>
                 <div className="flex items-start md:items-center">
                   <Award className="w-5 h-5 md:w-6 md:h-6 text-brand-gold mr-3 flex-shrink-0 mt-0.5 md:mt-0" />
@@ -179,7 +172,7 @@ export const WhatWeOfferSection = () => {
                 </div>
                 <div className="flex items-start md:items-center">
                   <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-brand-gold mr-3 flex-shrink-0 mt-0.5 md:mt-0" />
-                  <span className="text-sm md:text-lg leading-relaxed">500+ Satisfied Customers Across India</span>
+                  <span className="text-sm md:text-lg leading-relaxed">150+ Satisfied Customers Across India</span>
                 </div>
                 <div className="flex items-start md:items-center">
                   <Shield className="w-5 h-5 md:w-6 md:h-6 text-brand-gold mr-3 flex-shrink-0 mt-0.5 md:mt-0" />
@@ -189,7 +182,7 @@ export const WhatWeOfferSection = () => {
             </div>
             <div className="text-center lg:text-right mt-6 lg:mt-0">
               <div className="inline-block bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6 mb-4 md:mb-6">
-                <div className="text-3xl md:text-4xl font-bold text-brand-gold mb-1 md:mb-2">4.9★</div>
+                <div className="text-3xl md:text-4xl font-bold text-brand-gold mb-1 md:mb-2">4.2★</div>
                 <div className="text-white/80 text-sm md:text-base">Customer Rating</div>
               </div>
               <div className="space-y-3">

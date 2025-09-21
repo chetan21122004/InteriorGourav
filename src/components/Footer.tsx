@@ -74,7 +74,7 @@ export const Footer = () => {
                 </h3>
                 <p className="text-gray-300 text-sm md:text-base leading-relaxed">
                   Transform your spaces with award-winning interior design solutions. 
-                  15+ years of excellence in creating beautiful, functional environments.
+                  7+ years of excellence in creating beautiful, functional environments.
                 </p>
               </div>
               
