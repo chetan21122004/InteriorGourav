@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { BlogCard } from "@/components/BlogCard";
 import { ArrowRight, ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
 import { getFeaturedPosts, getRecentPosts } from "@/data/blogData";
+import { ScrollAnimation, StaggerAnimation, ParallaxScroll } from "@/components/animations";
 
 export const BlogSection = () => {
   const allPosts = getRecentPosts(6); // Get 6 posts for the slider
@@ -51,37 +52,48 @@ export const BlogSection = () => {
   };
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+    <section className="section-padding bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-brand-gold/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-yellow-400/5 rounded-full blur-3xl"></div>
+      <ParallaxScroll offset={30}>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-brand-gold/5 rounded-full blur-3xl"></div>
+      </ParallaxScroll>
+      <ParallaxScroll offset={-20}>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-yellow-400/5 rounded-full blur-3xl"></div>
+      </ParallaxScroll>
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto container-padding relative z-10">
         {/* Enhanced Header */}
         <div className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-gold/10 rounded-full text-brand-gold text-sm font-medium mb-4">
-            <span className="w-2 h-2 bg-brand-gold rounded-full animate-pulse"></span>
-            Latest Insights
-          </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-navy mb-4 md:mb-6 tracking-tight">
-            Design Stories &{" "}
-            <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
-              Expert Tips
-            </span>
-          </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Discover the latest trends, timeless principles, and insider secrets from the world of interior design
-          </p>
+          <ScrollAnimation animation="fadeDown">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-gold/10 rounded-full text-brand-gold text-sm font-medium mb-4">
+              <span className="w-2 h-2 bg-brand-gold rounded-full animate-pulse"></span>
+              Latest Insights
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation animation="fadeUp" delay={0.2}>
+            <h2 className="text-section text-brand-navy mb-6 tracking-tight">
+              Design Stories &{" "}
+              <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+                Expert Tips
+              </span>
+            </h2>
+          </ScrollAnimation>
+          <ScrollAnimation animation="fadeUp" delay={0.4}>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Discover the latest trends, timeless principles, and insider secrets from the world of interior design
+            </p>
+          </ScrollAnimation>
         </div>
 
         {/* Professional Slider */}
-        <div 
-          className="relative"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
+        <ScrollAnimation animation="scale" delay={0.6}>
+          <div 
+            className="relative"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
           {/* Slider Container */}
-          <div className="overflow-hidden rounded-2xl bg-white shadow-2xl border border-gray-100">
+          <div className="card-professional shadow-luxury border border-gray-100 overflow-hidden">
             <div 
               ref={sliderRef}
               className="flex transition-transform duration-700 ease-in-out"
@@ -215,25 +227,27 @@ export const BlogSection = () => {
               {currentSlide + 1} / {maxSlides}
             </div>
           </div>
-        </div>
+          </div>
+        </ScrollAnimation>
 
         {/* Enhanced View All Button */}
-        <div className="text-center mt-12 md:mt-16">
-          <div className="inline-flex flex-col items-center gap-4">
-            <Button 
-              variant="gold" 
-              size="lg"
-              className="group px-10 py-4 text-lg font-semibold bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-500 hover:to-brand-gold transition-all duration-500 shadow-xl hover:shadow-2xl hover:scale-105 rounded-2xl"
-              onClick={() => window.location.href = '/blog'}
-            >
-              Explore All Articles
-              <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300" />
-            </Button>
-            <p className="text-sm text-gray-500">
-              {allPosts.length}+ expert articles on interior design
-            </p>
+        <ScrollAnimation animation="fadeUp" delay={0.8}>
+          <div className="text-center mt-12 md:mt-16">
+            <div className="inline-flex flex-col items-center gap-4">
+              <Button 
+                variant="gold" 
+                className="btn-professional bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-500 hover:to-brand-gold text-white shadow-luxury focus-ring group"
+                onClick={() => window.location.href = '/blog'}
+              >
+                Explore All Articles
+                <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300" />
+              </Button>
+              <p className="text-sm text-gray-500">
+                {allPosts.length}+ expert articles on interior design
+              </p>
+            </div>
           </div>
-        </div>
+        </ScrollAnimation>
       </div>
     </section>
   );

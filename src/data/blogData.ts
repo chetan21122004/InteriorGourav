@@ -170,9 +170,15 @@ export const getPostsByCategory = (category: string) => {
   return blogPosts.filter(post => post.category === category);
 };
 
-export const getPostById = (id: number) => blogPosts.find(post => post.id === id);
+// Get post by ID
+export const getPostById = (id: number): BlogPost | undefined => {
+  return blogPosts.find(post => post.id === id);
+};
 
-export const getPostBySlug = (slug: string) => blogPosts.find(post => post.slug === slug);
+// Get post by slug
+export const getPostBySlug = (slug: string): BlogPost | undefined => {
+  return blogPosts.find(post => post.slug === slug);
+};
 
 export const getRecentPosts = (limit: number = 5) => blogPosts.slice(0, limit);
 

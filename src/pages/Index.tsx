@@ -14,35 +14,38 @@ import { BlogSection } from "@/components/BlogSection";
 import { FAQSection } from "@/components/FAQSection";
 import { ConnectSection } from "@/components/ConnectSection";
 import { Footer } from "@/components/Footer";
+import { PageTransition } from "@/components/animations";
 
 const Index = () => {
   return (
-    <div className="min-h-screen scroll-smooth">
-      <Header />
-      <HeroSection />
-      {/* <BenefitsSection /> */}
-      {/* <WhyChooseSection /> */}
-      <BudgetSection />
-      <WhatWeOfferSection />
-      <section id="gallery">
-        <GallerySection />
-      </section>
-      <section id="services">
-        <HowItWorksSection />
-      </section>
-      {/* <TestimonialSection /> */}
-      {/* <DownloadSection /> */}
-      {/* <EstimateSection /> */}
-      {/* <BrandsSection /> */}
-      <BlogSection />
-      <section id="about">
-        <FAQSection />
-      </section>
-      <section id="contact">
-        <ConnectSection />
-      </section>
-      <Footer />
-    </div>
+    <PageTransition>
+      <div className="min-h-screen scroll-smooth">
+        <Header />
+        <HeroSection />
+        {/* <BenefitsSection /> */}
+        {/* <WhyChooseSection /> */}
+        <BudgetSection />
+        <WhatWeOfferSection />
+        <section id="gallery">
+          <GallerySection />
+        </section>
+        <section id="services">
+          <HowItWorksSection />
+        </section>
+        {/* <TestimonialSection /> */}
+        {/* <DownloadSection /> */}
+        {/* <EstimateSection /> */}
+        {/* <BrandsSection /> */}
+        <BlogSection />
+        <section id="about">
+          <FAQSection />
+        </section>
+        <section id="contact">
+          <ConnectSection />
+        </section>
+        <Footer />
+      </div>
+    </PageTransition>
   );
 };
 

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ScrollAnimation, StaggerAnimation } from "@/components/animations";
 
 export const BudgetSection = () => {
   const budgetOptions = [
@@ -23,15 +24,19 @@ export const BudgetSection = () => {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-brand-navy mb-4">
-            Homes for every budget
-          </h2>
-          <p className="text-lg text-brand-gray">
-            Our interior designers work with you keeping in mind your requirements and budget
-          </p>
+          <ScrollAnimation animation="fadeUp">
+            <h2 className="text-4xl font-bold text-brand-navy mb-4">
+              Homes for every budget
+            </h2>
+          </ScrollAnimation>
+          <ScrollAnimation animation="fadeUp" delay={0.2}>
+            <p className="text-lg text-brand-gray">
+              Our interior designers work with you keeping in mind your requirements and budget
+            </p>
+          </ScrollAnimation>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <StaggerAnimation className="grid md:grid-cols-3 gap-8 mb-12" staggerDelay={0.2}>
           {budgetOptions.map((option, index) => (
             <div key={index} className="relative overflow-hidden rounded-lg shadow-medium">
               <img 
@@ -46,13 +51,15 @@ export const BudgetSection = () => {
               </div>
             </div>
           ))}
-        </div>
+        </StaggerAnimation>
         
-        <div className="text-center">
-          <Button variant="gold" size="lg">
-            GET FREE QUOTE
-          </Button>
-        </div>
+        <ScrollAnimation animation="scale" delay={0.8}>
+          <div className="text-center">
+            <Button variant="gold" size="lg">
+              GET FREE QUOTE
+            </Button>
+          </div>
+        </ScrollAnimation>
       </div>
     </section>
   );

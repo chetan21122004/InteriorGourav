@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { ChevronLeft, ChevronRight, X, Eye } from "lucide-react";
+import { ScrollAnimation, StaggerAnimation } from "@/components/animations";
 
 export const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
@@ -83,18 +84,24 @@ export const GallerySection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-navy mb-3 md:mb-4">
-            Our <span className="text-brand-gold">Portfolio</span>
-          </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-6 md:mb-8 px-4 sm:px-0">
-            Discover our finest interior design projects that showcase creativity, functionality, and style
-          </p>
+          <ScrollAnimation animation="fadeDown">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-navy mb-3 md:mb-4">
+              Our <span className="text-brand-gold">Portfolio</span>
+            </h2>
+          </ScrollAnimation>
+          <ScrollAnimation animation="fadeUp" delay={0.2}>
+            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mb-6 md:mb-8 px-4 sm:px-0">
+              Discover our finest interior design projects that showcase creativity, functionality, and style
+            </p>
+          </ScrollAnimation>
         </div>
 
         {/* Featured Gallery Showcase */}
         <div className="mb-8 md:mb-12">
-          <h3 className="text-lg md:text-xl font-semibold text-brand-navy mb-4 md:mb-6 text-center">Featured Projects</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+          <ScrollAnimation animation="fadeUp" delay={0.4}>
+            <h3 className="text-lg md:text-xl font-semibold text-brand-navy mb-4 md:mb-6 text-center">Featured Projects</h3>
+          </ScrollAnimation>
+          <StaggerAnimation className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4" staggerDelay={0.1} animation="scale">
             {featuredImages.map((image) => (
               <div 
                 key={image.id}
@@ -119,11 +126,11 @@ export const GallerySection = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </StaggerAnimation>
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-8">
+        <StaggerAnimation className="flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-8" staggerDelay={0.1}>
           {categories.map((category) => (
             <Button
               key={category.id}
@@ -141,10 +148,11 @@ export const GallerySection = () => {
               {category.label}
             </Button>
           ))}
-        </div>
+        </StaggerAnimation>
 
         {/* Slider Gallery */}
-        <div className="relative">
+        <ScrollAnimation animation="fadeUp" delay={0.6}>
+          <div className="relative">
           <div className="overflow-hidden rounded-lg md:rounded-xl">
             <div 
               ref={sliderRef}
@@ -217,7 +225,8 @@ export const GallerySection = () => {
               ))}
             </div>
           )}
-        </div>
+          </div>
+        </ScrollAnimation>
 
         {/* Lightbox Dialog */}
         <Dialog open={selectedImage !== null} onOpenChange={() => closeLightbox()}>
