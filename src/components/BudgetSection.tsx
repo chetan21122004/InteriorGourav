@@ -55,7 +55,12 @@ export const BudgetSection = () => {
         
         <ScrollAnimation animation="scale" delay={0.8}>
           <div className="text-center">
-            <Button variant="gold" size="lg">
+            <Button 
+              variant="gold" 
+              size="lg"
+              className="btn-professional bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-500 hover:to-brand-gold text-white shadow-elegant focus-ring"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) || window.open("https://wa.me/918210827736?text=Hi%20Kumar%20Gaurav,%20I'm%20interested%20in%20getting%20a%20quote%20for%20my%20interior%20design%20project", "_blank")}
+            >
               GET FREE QUOTE
             </Button>
           </div>

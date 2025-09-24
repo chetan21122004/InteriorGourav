@@ -18,11 +18,21 @@ export const ConnectSection = () => {
         </ScrollAnimation>
         
         <StaggerAnimation className="flex flex-col sm:flex-row gap-4 justify-center items-center" staggerDelay={0.2}>
-          <Button variant="gold" size="lg" className="flex items-center space-x-2 min-w-48">
+          <Button 
+            variant="gold" 
+            size="lg" 
+            className="btn-professional bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-500 hover:to-brand-gold text-white shadow-elegant focus-ring flex items-center space-x-2 min-w-48"
+            onClick={() => window.open("tel:+918210827736", "_self")}
+          >
             <Phone className="w-5 h-5" />
             <span>CALL NOW</span>
           </Button>
-          <Button variant="navy" size="lg" className="flex items-center space-x-2 min-w-48">
+          <Button 
+            variant="navy" 
+            size="lg" 
+            className="btn-professional bg-gradient-to-r from-brand-navy to-blue-900 hover:from-blue-900 hover:to-brand-navy text-white shadow-elegant focus-ring flex items-center space-x-2 min-w-48"
+            onClick={() => window.open("https://wa.me/918210827736?text=Hi%20Kumar%20Gaurav,%20I'm%20interested%20in%20your%20interior%20design%20services", "_blank")}
+          >
             <MessageCircle className="w-5 h-5" />
             <span>WHATSAPP</span>
           </Button>

@@ -298,7 +298,8 @@ export const GallerySection = () => {
           <Button 
             variant="gold" 
             size="lg"
-            className="px-6 md:px-8 py-3 font-semibold hover:scale-105 transition-transform duration-300 w-full sm:w-auto text-sm md:text-base"
+            className="btn-professional bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-500 hover:to-brand-gold text-white shadow-elegant focus-ring w-full sm:w-auto"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }) || window.open("https://wa.me/918210827736?text=Hi%20Kumar%20Gaurav,%20I'm%20interested%20in%20getting%20a%20free%20consultation", "_blank")}
           >
             Get Free Consultation
           </Button>

@@ -58,7 +58,12 @@ export const HowItWorksSection = () => {
           </div>
           
           <div className="mt-12">
-            <Button variant="gold" size="lg">
+            <Button 
+              variant="gold" 
+              size="lg"
+              className="btn-professional bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-500 hover:to-brand-gold text-white shadow-elegant focus-ring"
+              onClick={() => window.open("https://wa.me/918210827736?text=Hi%20Kumar%20Gaurav,%20I'd%20like%20to%20book%20a%20consultation%20for%20interior%20design%20services", "_blank")}
+            >
               BOOK A CONSULTATION
             </Button>
           </div>

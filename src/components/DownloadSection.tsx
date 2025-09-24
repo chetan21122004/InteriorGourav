@@ -22,7 +22,12 @@ export const DownloadSection = () => {
               Don't forget to consider these fundamental design guidelines to 
               know before you start interior designing!
             </p>
-            <Button variant="gold" size="lg" className="flex items-center space-x-2">
+            <Button 
+              variant="gold" 
+              size="lg" 
+              className="btn-professional bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-500 hover:to-brand-gold text-white shadow-elegant focus-ring flex items-center space-x-2"
+              onClick={() => window.open("https://wa.me/918210827736?text=Hi%20Kumar%20Gaurav,%20I'd%20like%20to%20download%20the%20home%20interior%20design%20guide", "_blank")}
+            >
               <Download className="w-5 h-5" />
               <span>DOWNLOAD NOW</span>
             </Button>

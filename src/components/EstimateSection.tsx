@@ -47,8 +47,13 @@ export const EstimateSection = () => {
               <p className="text-brand-gray mb-6">
                 {option.description}
               </p>
-              <Button variant="gold" size="lg" className="w-full">
-                {option.buttonText} &gt;
+              <Button 
+                variant="gold" 
+                size="lg" 
+                className="btn-professional bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-500 hover:to-brand-gold text-white shadow-elegant focus-ring w-full"
+                onClick={() => window.open(`https://wa.me/918210827736?text=Hi%20Kumar%20Gaurav,%20I'm%20interested%20in%20getting%20a%20cost%20estimate%20for%20${option.title.toLowerCase()}%20design`, "_blank")}
+              >
+                {option.buttonText} →
               </Button>
             </div>
           ))}

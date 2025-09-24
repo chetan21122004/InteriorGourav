@@ -69,9 +69,7 @@ export const Footer = () => {
                   alt="Kumar Gaurav Interiors" 
                   className="h-10 md:h-12 w-auto object-contain mb-4"
                 />
-                <h3 className="text-xl md:text-2xl font-bold text-brand-gold mb-2">
-                  Kumar Gaurav Interiors
-                </h3>
+            
                 <p className="text-gray-300 text-sm md:text-base leading-relaxed">
                   Transform your spaces with award-winning interior design solutions. 
                   7+ years of excellence in creating beautiful, functional environments.
@@ -155,7 +153,15 @@ export const Footer = () => {
               <div className="mt-6">
                 <Button 
                   variant="gold" 
-                  className="w-full md:w-auto px-6 py-3 font-semibold hover:scale-105 transition-transform duration-300"
+                  className="btn-professional bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-500 hover:to-brand-gold text-white shadow-elegant focus-ring w-full md:w-auto"
+                  onClick={() => {
+                    const contactElement = document.getElementById('contact');
+                    if (contactElement) {
+                      contactElement.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                      window.open("https://wa.me/918210827736?text=Hi%20Kumar%20Gaurav,%20I'm%20interested%20in%20getting%20a%20free%20consultation", "_blank");
+                    }
+                  }}
                 >
                   Get Free Consultation
                 </Button>

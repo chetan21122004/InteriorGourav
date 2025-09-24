@@ -25,7 +25,7 @@ interface BlogCardProps {
 export const BlogCard = ({ post, variant = "default", className = "" }: BlogCardProps) => {
   const handleReadMore = () => {
     // Navigate to blog post detail page
-    console.log(`Navigate to blog post: ${post.slug || post.id}`);
+    window.location.href = `/blog/${post.slug || post.id}`;
   };
 
   if (variant === "featured") {

@@ -107,7 +107,8 @@ export const BlogSection = () => {
                       .map((post, index) => (
                         <div 
                           key={post.id} 
-                          className={`group relative ${index < 2 ? 'md:border-r border-gray-100' : ''} ${index < 2 ? 'border-b md:border-b-0 border-gray-100' : ''}`}
+                          className={`group relative cursor-pointer ${index < 2 ? 'md:border-r border-gray-100' : ''} ${index < 2 ? 'border-b md:border-b-0 border-gray-100' : ''}`}
+                          onClick={() => window.location.href = `/blog/${post.slug || post.id}`}
                         >
                           {/* Card Content */}
                           <div className="p-6 md:p-8 h-full flex flex-col">
@@ -159,7 +160,11 @@ export const BlogSection = () => {
                                 <Button 
                                   variant="ghost" 
                                   size="sm"
-                                  className="text-brand-gold hover:text-white hover:bg-brand-gold transition-all duration-300 px-4 py-2 rounded-full group/btn"
+                                  className="text-brand-gold hover:text-white hover:bg-brand-gold transition-all duration-300 px-4 py-2 rounded-full group/btn focus-ring"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    window.location.href = `/blog/${post.slug || post.id}`;
+                                  }}
                                 >
                                   Read
                                   <ArrowRight className="w-3 h-3 ml-1 group-hover/btn:translate-x-1 transition-transform" />
@@ -182,8 +187,11 @@ export const BlogSection = () => {
               <Button
                 variant="outline"
                 size="sm"
-                onClick={prevSlide}
-                className="w-12 h-12 rounded-full border-2 border-gray-200 hover:border-brand-gold hover:text-brand-gold transition-all duration-300 group"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  prevSlide();
+                }}
+                className="w-12 h-12 rounded-full border-2 border-gray-200 hover:border-brand-gold hover:text-brand-gold transition-all duration-300 group focus-ring"
               >
                 <ChevronLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
               </Button>
@@ -191,8 +199,11 @@ export const BlogSection = () => {
               <Button
                 variant="outline"
                 size="sm"
-                onClick={nextSlide}
-                className="w-12 h-12 rounded-full border-2 border-gray-200 hover:border-brand-gold hover:text-brand-gold transition-all duration-300 group"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  nextSlide();
+                }}
+                className="w-12 h-12 rounded-full border-2 border-gray-200 hover:border-brand-gold hover:text-brand-gold transition-all duration-300 group focus-ring"
               >
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -200,8 +211,11 @@ export const BlogSection = () => {
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={toggleAutoPlay}
-                className="w-12 h-12 rounded-full text-gray-500 hover:text-brand-gold hover:bg-brand-gold/10 transition-all duration-300"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  toggleAutoPlay();
+                }}
+                className="w-12 h-12 rounded-full text-gray-500 hover:text-brand-gold hover:bg-brand-gold/10 transition-all duration-300 focus-ring"
               >
                 {isAutoPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
               </Button>
@@ -212,8 +226,11 @@ export const BlogSection = () => {
               {Array.from({ length: maxSlides }).map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`transition-all duration-300 rounded-full ${
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    goToSlide(index);
+                  }}
+                  className={`transition-all duration-300 rounded-full focus-ring ${
                     index === currentSlide 
                       ? 'w-8 h-3 bg-gradient-to-r from-brand-gold to-yellow-500' 
                       : 'w-3 h-3 bg-gray-300 hover:bg-gray-400'
