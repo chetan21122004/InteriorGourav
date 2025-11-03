@@ -201,7 +201,7 @@ export const WhatWeOfferSection = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Users className="w-4 h-4 text-purple-600 flex-shrink-0" />
-                  <span className="text-sm text-purple-800">500+ satisfied clients</span>
+                  <span className="text-sm text-purple-800">150+ satisfied clients</span>
                 </div>
               </div>
             </div>
@@ -260,7 +260,7 @@ export const WhatWeOfferSection = () => {
                       <Clock className="w-10 h-10 text-brand-gold group-hover:scale-110 transition-transform duration-300" />
             </div>
                     <div className="text-3xl font-bold text-brand-gold mb-2">45</div>
-                    <div className="text-white/90 font-medium">Days Delivery</div>
+                    <div className="text-white/90 font-medium">Days Delivery t&c apply</div>
                   </div>
                 </div>
                 
@@ -298,7 +298,7 @@ export const WhatWeOfferSection = () => {
                         Start Project
                       </Button>
                       <Button 
-                        variant="outline" 
+                        variant="gold" 
                         size="lg" 
                         className="flex-1 px-6 py-4 text-lg font-semibold border-2 border-white/30 text-white hover:border-white hover:bg-white/10 transition-all duration-300"
                       >

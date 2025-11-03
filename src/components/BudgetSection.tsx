@@ -9,12 +9,12 @@ export const BudgetSection = () => {
       alt: " Modular Kitchen",
     },
     {
-      price: " 2bhk Starting at 6.75L*",
+      price: " 2bhk Starting at 5.75L*",
       image: "/work/1.jpg",
       alt: "2bhk",
     },
     {
-      price: "3bhk Starting at 8.75L*",
+      price: "3bhk Starting at 7.75L*",
       image: "/work/11.jpg",
       alt: "3bhk  8.75L",
     },
