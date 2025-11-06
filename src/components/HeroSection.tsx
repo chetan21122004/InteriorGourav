@@ -69,7 +69,7 @@ export const HeroSection = () => {
             <StaggerAnimation className="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6 mb-6 md:mb-8" staggerDelay={0.15} animation="slideUp">
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 md:w-5 md:h-5 text-brand-gold" />
-                <span className="text-white/80 text-sm md:text-base">7+ Years Experience</span>
+                <span className="text-white/80 text-sm md:text-base">5+ Years Experience</span>
               </div>
               <div className="flex items-center gap-2">
                 <Award className="w-4 h-4 md:w-5 md:h-5 text-brand-gold" />

@@ -72,7 +72,7 @@ export const Footer = () => {
             
                 <p className="text-gray-300 text-sm md:text-base leading-relaxed">
                   Transform your spaces with award-winning interior design solutions. 
-                  7+ years of excellence in creating beautiful, functional environments.
+                  5+ years of excellence in creating beautiful, functional environments.
                 </p>
               </div>
               
