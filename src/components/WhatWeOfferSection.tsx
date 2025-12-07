@@ -243,7 +243,7 @@ export const WhatWeOfferSection = () => {
                     <div className="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:bg-white/20 transition-all duration-300">
                       <Users className="w-10 h-10 text-brand-gold group-hover:scale-110 transition-transform duration-300" />
             </div>
-                    <div className="text-3xl font-bold text-brand-gold mb-2">500+</div>
+                    <div className="text-3xl font-bold text-brand-gold mb-2">150+</div>
                     <div className="text-white/90 font-medium">Happy Clients</div>
           </div>
           
