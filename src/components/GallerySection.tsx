@@ -11,7 +11,7 @@ export const GallerySection = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
 
   // Generate image data for 1.jpg to 30.jpg
-  const images = Array.from({ length: 30 }, (_, i) => ({
+  const images = Array.from({ length: 32 }, (_, i) => ({
     id: i + 1,
     src: `/work/${i + 1}.jpg`,
     alt: `Interior Design Project ${i + 1}`,
